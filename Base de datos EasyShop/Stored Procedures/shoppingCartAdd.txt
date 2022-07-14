@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `shoppingCartAdd`(
+in _id varchar(200),
+in _userId varchar(200),
+in _product varchar(200),
+in _cantidadComprada int
+)
+BEGIN
+	insert into shopping_cart(id,userId,product,cantidadComprada) values (_id,_userId,_product,_cantidadComprada);
+END

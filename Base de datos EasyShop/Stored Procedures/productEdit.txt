@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `productEdit`(
+in _idProduct varchar(100),
+in _titulo varchar(100),
+in _descripcion varchar(100),
+in _condicion varchar(100),
+in _stock int,
+in _precio int,
+in _precioEnvio int
+)
+BEGIN
+UPDATE datosyredes.products SET titulo = _titulo, descripcion = _descripcion, condicion = _condicion, stock = _stock, precio = _precio, precioEnvio = _precioEnvio WHERE id = _idProduct;
+
+END

@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `usuarioAdd`(
+	IN _id VARCHAR(100),
+    IN _rol VARCHAR(100),
+    IN _username VARCHAR(100),
+    IN _name VARCHAR(100),
+    IN _lastname VARCHAR(100),
+    IN _rut VARCHAR(100),
+    IN _email VARCHAR(100),
+    IN _password VARCHAR(100)
+)
+BEGIN
+	insert into usuarios(id,rol,username,name,lastname,rut,email,password) values (_id,_rol,_username,_name,_lastname,_rut,_email,_password);
+END

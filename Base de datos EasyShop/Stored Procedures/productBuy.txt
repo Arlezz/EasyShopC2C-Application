@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `productBuy`(
+in _idProduct varchar(100),
+in _cantidad int
+)
+BEGIN
+	select @stock := stock from products where id = _idProduct;
+	if @stock >= 1 and @stock >= _cantidad then
+		UPDATE `datosyredes`.`products` SET `stock` = (@stock - _cantidad) WHERE (`id` = _idProduct);
+    end if;
+END

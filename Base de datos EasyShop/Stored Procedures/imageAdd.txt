@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `imageAdd`(
+IN _idProduct VARCHAR(100),
+IN _productImage VARCHAR(200)
+)
+BEGIN
+insert into datosyredes.images (id_Producto,imageProduct) values(_idProduct,_productImage);
+END

@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `usuarioEditDireccion`(
+IN _id VARCHAR(100),
+IN _region VARCHAR(100),
+IN _comuna VARCHAR(100),
+IN _calle VARCHAR(100),
+IN _numero VARCHAR(100),
+IN _telefono VARCHAR(100)
+)
+BEGIN
+UPDATE datosyredes.usuarios SET region = _region, comuna = _comuna, calle = _calle, numero = _numero, telefono = _telefono WHERE id = _id;
+END

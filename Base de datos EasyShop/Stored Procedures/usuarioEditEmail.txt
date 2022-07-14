@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `usuarioEditEmail`(
+IN _id VARCHAR(100),
+IN _email VARCHAR(200)
+)
+BEGIN
+UPDATE datosyredes.usuarios SET email = _email WHERE id = _id;	
+END

@@ -1,0 +1,18 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `productAdd`(
+in _propietario varchar(100),
+in _idProduct varchar(100),
+in _nro_publicacion varchar(100),
+in _titulo varchar(100),
+in _categoria varchar(100),
+in _subcategoria varchar(100),
+in _descripcion varchar(100),
+in _condicion varchar(100),
+in _stock int,
+in _precio int,
+in _precioEnvio int,
+in _region varchar(100),
+in _comuna varchar(100))
+BEGIN
+	INSERT INTO datosyredes.products (id,propietario,nro_publicacion,titulo,categoria,subcategoria,descripcion,condicion,stock,precio,precioEnvio,region,comuna)
+ values (_idProduct,_propietario,_nro_publicacion,_titulo,_categoria,_subcategoria,_descripcion,_condicion,_stock,_precio,_precioEnvio,_region,_comuna); 
+END

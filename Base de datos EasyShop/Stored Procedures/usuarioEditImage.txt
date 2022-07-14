@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `usuarioEditImage`(
+IN _id VARCHAR(100),
+IN _userImage VARCHAR(200)
+)
+BEGIN
+UPDATE datosyredes.usuarios SET imagen = _userImage WHERE id = _id;
+END
